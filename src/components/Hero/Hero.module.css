@@ -1,0 +1,15 @@
+.imgBackground{
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-image: url(../../assets/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+.imgBackground h1{
+    text-align: center;
+    font-size: 100px;
+    padding-top: 160px;
+    color: #043934;
+}

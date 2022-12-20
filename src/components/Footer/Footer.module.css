@@ -1,0 +1,25 @@
+.containerFooter{
+    margin-top: 100px;
+    padding: 0 60px;
+    width: 100%;
+    background-color: rgb(51, 51, 51);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.containerFooter h1{
+    color: #054b44;
+}
+.name{
+    color: #7b9893;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.icons a{
+    color: azure;
+}

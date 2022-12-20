@@ -1,0 +1,60 @@
+.boxNav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    justify-content: space-around;
+    background-color: #fffaf4;
+    position: fixed;
+}
+.nav{
+    display: flex;
+    gap: 30px;
+    color: #7b9893;
+    font-size: 20px;
+}
+.nav a{
+    color: inherit;
+    transition: all 0.3s ease;
+}
+.nav a:hover{
+    color: #feb9a1;
+}
+.boxNav h1{
+    color: #054b44;
+}
+.name{
+    color: #7b9893;
+}
+.imgCarrito{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 20px;
+}
+.searchInput{
+    display:flex;
+    position: relative;
+
+}
+.searchInput input{
+    border: none;
+    outline: none;
+    padding: 10px 25px;
+    border-radius: 15px;
+    color: white;
+    background-color: #7b9893;
+}
+.search{
+    position: absolute;
+    left: 5px;
+    top: 8px;
+}
+.search img{
+    width: 20px;
+}
+.searchInput input::placeholder{
+    color: white;
+    padding-left: 6px;
+}
