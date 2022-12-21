@@ -6,7 +6,11 @@ import { useNavigate } from 'react-router-dom'
 
 export const Nabvar = () => {
     const navigate = useNavigate()
-    console.log(navigate)
+
+    const  HandleClick = ()=> {
+        navigate('/carrito')
+    }
+    
     return (
         <header className={styles.boxNav}>
             <nav className={styles.nav}>
@@ -16,11 +20,11 @@ export const Nabvar = () => {
             </nav>
             <h1>Eccomerce<span className={styles.name}>Diego</span> </h1>
             <div className={styles.imgCarrito}>
-                <img src={carritoImg} alt="carrito" />  
+                <img onClick={HandleClick} src={carritoImg} alt="carrito" />  
                 
                 <div className={styles.searchInput}>
                     <input type="text" placeholder="Buscar.." /> 
-                    <div className={styles.search} onClick={()=> navigate('/carrito')}>
+                    <div className={styles.search}>
                         <img src={searchImg} alt='carrito' />
                     </div>
                 </div>

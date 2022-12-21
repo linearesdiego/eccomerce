@@ -5,7 +5,7 @@ import { ProductCont } from "../../context/ProductContext";
 
 export const ProductosAll = () => {
     const [onSelect, setOnSelect] = useState("");
-    const {Products,getProducts} = useContext(ProductCont)
+    const {Products} = useContext(ProductCont)
 
 
     // useEffect(() => {

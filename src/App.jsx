@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes, BrowserRouter } from "react-router-dom"
 import { Carrito } from "./components/Carrito/Carrito"
 import { Home } from "./components/Home/Home"
 import { Nabvar } from "./components/Navbar/Nabvar"
@@ -8,14 +8,15 @@ import { ProductContext } from "./context/ProductContext"
 function App() {
   return (
 
-      <ProductContext>
-      <Nabvar />
+      <BrowserRouter>
+        <Nabvar />
+        
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/producto/:id" element={<ProductoId />} />
           <Route path="/carrito" element={<Carrito />} />
         </Routes>
-      </ProductContext>
+      </BrowserRouter>
   )
 }
 

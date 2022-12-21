@@ -31,18 +31,24 @@ export const ProductContext = ({children}) => {
         return Products.find(item => item.id == id)
     }
     const addCarrito = (object)=> {
-        console.log(object)
         setaddProductCarrito([...addProductCarrito, object])
     }
-
+    const deleteCarrito = (id)=> {
+        console.log(id)
+        let filter =  addProductCarrito.filter(item => item.id != id)
+        setaddProductCarrito(filter)
+    }
+    // console.log(addProductCarrito)
   return (
 
     <ProductCont.Provider value={{
         Products,
+        addProductCarrito,
         setProducts,
         getProductId,
         getProducts,
-        addCarrito
+        addCarrito,
+        deleteCarrito
     }}>
         {children}
     </ProductCont.Provider>
