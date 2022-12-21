@@ -6,6 +6,7 @@ export const ProductCont = React.createContext('')
 
 export const ProductContext = ({children}) => {
     const [Products, setProducts] = useState([]);
+    const [addProductCarrito, setaddProductCarrito] = useState([])
 
     const getProducts = async () => {
         await axios.get('https://fakestoreapi.com/products', {
@@ -29,7 +30,10 @@ export const ProductContext = ({children}) => {
         // console.log(id)
         return Products.find(item => item.id == id)
     }
-
+    const addCarrito = (object)=> {
+        console.log(object)
+        setaddProductCarrito([...addProductCarrito, object])
+    }
 
   return (
 
@@ -37,7 +41,8 @@ export const ProductContext = ({children}) => {
         Products,
         setProducts,
         getProductId,
-        getProducts
+        getProducts,
+        addCarrito
     }}>
         {children}
     </ProductCont.Provider>

@@ -8,9 +8,9 @@ export const ProductosAll = () => {
     const {Products,getProducts} = useContext(ProductCont)
 
 
-    useEffect(() => {
-        getProducts()
-    }, [])
+    // useEffect(() => {
+    //     getProducts()
+    // }, [])
     
    
     const handleChange = ({ target }) => {
