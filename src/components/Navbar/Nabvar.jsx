@@ -2,8 +2,11 @@
 import styles from './Nabvar.module.css'
 import carritoImg from '../../assets/carrito.png'
 import searchImg from '../../assets/search.png'
+import { useNavigate } from 'react-router-dom'
 
 export const Nabvar = () => {
+    const navigate = useNavigate()
+    console.log(navigate)
     return (
         <header className={styles.boxNav}>
             <nav className={styles.nav}>
@@ -17,8 +20,8 @@ export const Nabvar = () => {
                 
                 <div className={styles.searchInput}>
                     <input type="text" placeholder="Buscar.." /> 
-                    <div className={styles.search} >
-                        <img src={searchImg} alt="" />
+                    <div className={styles.search} onClick={()=> navigate('/carrito')}>
+                        <img src={searchImg} alt='carrito' />
                     </div>
                 </div>
             </div>
