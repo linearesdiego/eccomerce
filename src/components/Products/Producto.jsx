@@ -21,10 +21,11 @@ export const Producto = ({
         </div>
 
         <h3>{title}</h3>
+        {/* <p>{index}</p> */}
         <p>{description.slice(0,100)}</p>
         <p> Precio: <span>${price}</span></p>
         <div className={styles.buttonContainer}>
-          <button className={styles.addCarrito} onClick={()=>addCarrito({id,title,image,price})}>Agregar al carrito</button>
+          <button className={styles.addCarrito} onClick={()=>addCarrito({id,title,image,price,cantidad:1})}>Agregar al carrito</button>
           <Link to={`/producto/${id}`}>Ver mas..</Link>
         </div>
     </div>

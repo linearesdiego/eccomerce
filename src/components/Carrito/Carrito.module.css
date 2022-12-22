@@ -1,6 +1,6 @@
 .boxCarrito{
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,4 +55,36 @@
 }
 .textRight button:hover{
     transform: scale(1.1)
+}
+.Cartel{
+    font-size: 2em; 
+    font-family: 'Poppins', sans-serif;
+    color: #054b44;
+    font-weight: 600;
+    border: 1px solid #054b44;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: rgba(46, 97, 25, 0.35) 0px 5px 15px;
+
+}
+.total{
+    margin-left: 10px;
+    font-size: 1.5em;
+
+}
+.btnCarrito{
+    padding-top: 100px;
+
+    display: flex; 
+    gap: 40px;
+    margin-bottom: 15px;
+}
+.btnCarrito button{
+    color: white;
+    cursor: pointer;
+    border: none;
+    background-color: #054b44;
+    padding: 10px 17px;
+    border-radius: 15px;
+
 }

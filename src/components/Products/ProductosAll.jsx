@@ -32,7 +32,7 @@ export const ProductosAll = () => {
                 <option value="electronics">electronics</option>
             </select>
                 <div className={styles.cardContainer}>
-                    {array.map(item => {
+                    {array.map( (item) => {
                         return (
                             <div key={item.id}>
                                 <Producto

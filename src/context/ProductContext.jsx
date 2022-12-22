@@ -7,6 +7,7 @@ export const ProductCont = React.createContext('')
 export const ProductContext = ({children}) => {
     const [Products, setProducts] = useState([]);
     const [addProductCarrito, setaddProductCarrito] = useState([])
+    const [Total, setTotal] = useState(0)
 
     const getProducts = async () => {
         await axios.get('https://fakestoreapi.com/products', {
@@ -31,24 +32,37 @@ export const ProductContext = ({children}) => {
         return Products.find(item => item.id == id)
     }
     const addCarrito = (object)=> {
+        console.log(object)
+
         setaddProductCarrito([...addProductCarrito, object])
+        setTotal(Total + Math.round(object.price) )
     }
-    const deleteCarrito = (id)=> {
-        console.log(id)
+    const deleteCarrito = (id, price)=> {
+        // console.log(price,id)
         let filter =  addProductCarrito.filter(item => item.id != id)
         setaddProductCarrito(filter)
+        setTotal(Total - Math.round(price) )
+
+    }
+    const clearCarrito = ()=> {
+        setaddProductCarrito([])
+        setTotal(0)
     }
     // console.log(addProductCarrito)
+    // console.log(Total)
   return (
 
     <ProductCont.Provider value={{
         Products,
         addProductCarrito,
+        Total,
         setProducts,
         getProductId,
         getProducts,
         addCarrito,
-        deleteCarrito
+        deleteCarrito,
+        clearCarrito,
+        
     }}>
         {children}
     </ProductCont.Provider>
