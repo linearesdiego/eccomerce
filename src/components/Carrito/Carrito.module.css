@@ -15,7 +15,7 @@
 .itemCarrito{
     display: flex;
     width: 420px;
-    height: 194px;
+    height: auto;
     align-items: center;
     gap: 50px;
     /* border: 1px solid black; */

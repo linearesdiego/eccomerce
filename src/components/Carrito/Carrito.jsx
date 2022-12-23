@@ -5,7 +5,7 @@ import styles from './Carrito.module.css'
 
 
 export const Carrito = () => {
-  const { addProductCarrito, deleteCarrito, Total,clearCarrito } = useContext(ProductCont)
+  const { addProductCarrito, deleteCarrito, Total, clearCarrito } = useContext(ProductCont)
 
   return (
 
@@ -22,7 +22,7 @@ export const Carrito = () => {
           :
 
           <div className={styles.containerCarrito}>
-            {addProductCarrito.map(item => {
+            {addProductCarrito.map( item => {
               return (
                 <div key={item.id} className={styles.itemCarrito} >
                   <div className={styles.imgLeft}>
@@ -32,7 +32,8 @@ export const Carrito = () => {
                     <h1>{item.title}</h1>
                     <p>{item.description}</p>
                     <span>${Math.round(item.price)}</span>
-                    <button onClick={() => deleteCarrito(item.id, item.price)}>Delete</button>
+                    <span>Cantidad: {item.cantidad}</span>
+                    <button onClick={() => deleteCarrito(item.id, item.price,item.cantidad)}>Delete</button>
                   </div>
                 </div>
               )

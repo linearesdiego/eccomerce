@@ -3,6 +3,9 @@ import styles from './Nabvar.module.css'
 import carritoImg from '../../assets/carrito.png'
 import searchImg from '../../assets/search.png'
 import { useNavigate } from 'react-router-dom'
+import { useContext } from 'react'
+import { ProductCont } from '../../context/ProductContext'
+
 
 export const Nabvar = () => {
     const navigate = useNavigate()
@@ -10,6 +13,7 @@ export const Nabvar = () => {
     const  HandleClick = ()=> {
         navigate('/carrito')
     }
+  const {Counts } = useContext(ProductCont)
     
     return (
         <header className={styles.boxNav}>
@@ -21,7 +25,7 @@ export const Nabvar = () => {
             <h1>Eccomerce<span className={styles.name}>Diego</span> </h1>
             <div className={styles.imgCarrito}>
                 <img onClick={HandleClick} src={carritoImg} alt="carrito" />  
-                
+                <div className={styles.circle}>{Counts}</div>
                 <div className={styles.searchInput}>
                     <input type="text" placeholder="Buscar.." /> 
                     <div className={styles.search}>
